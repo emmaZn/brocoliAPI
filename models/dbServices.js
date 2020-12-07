@@ -4,12 +4,11 @@ let instance = null
 dotenv.config()
 
 const connection = mysql.createConnection({
-    host: process.env.HOST,
+    host: 'brocoli.cbyjxhnltwdv.eu-west-3.rds.amazonaws.com',
     user: 'admin',
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE,
-    port: process.env.DB_PORT,
-    insecureAuth: true,
+    password: 'adminbrocoli',
+    database: 'brocoli',
+    port: '3306',
 
 })
 

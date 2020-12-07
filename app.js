@@ -22,8 +22,11 @@ require("./routes/category.routes.js")(app);
 require("./routes/order.routes.js")(app);
 require("./routes/notification.routes.js")(app);
 
+app.get("/", (req, res) => {
+    res.json({ message: "Welcome to bezkoder application." });
+  });
 
-
-app.listen(process.env.PORT || 3000, () => {
-    console.log(`app is running on port ${process.env.PORT || 3000}`)
-})
+  const PORT = process.env.PORT || 8080;
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}.`);
+  });
